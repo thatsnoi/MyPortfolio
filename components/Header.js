@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import Container from './Container'
 import { motion } from 'framer-motion'
 import {
@@ -6,6 +7,7 @@ import {
   underlineStyle,
   underlineEffect,
 } from './../styles/motion'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -31,35 +33,36 @@ export default function Header() {
         animate="visible"
         variants={list(1.5)}
       >
-        <p>
-          <motion.a
-            className="font-bold dark:text-white dark:text-opacity-80 mb-2"
-            variants={fadeIn}
-            style={underlineStyle}
-            whileHover={underlineEffect}
-          >
-            Home
-          </motion.a>
-        </p>
-        <MenuItem>About</MenuItem>
-        <MenuItem>Projects</MenuItem>
-        <MenuItem>Contact</MenuItem>
+        <MenuItem href="/#home" className="mb-2">
+          Home
+        </MenuItem>
+        <MenuItem href="/#about">About</MenuItem>
+        <MenuItem href="/#projects"> Projects</MenuItem>
+        <MenuItem href="/#contact">Contact</MenuItem>
       </motion.div>
     </Container>
   )
 }
 
-function MenuItem({ children }) {
+function MenuItem({ className, children, href }) {
+  const router = useRouter()
+
   return (
-    <p>
-      <motion.a
-        className="relative dark:text-opacity-60 dark:hover:text-opacity-100 text-black dark:text-white"
-        variants={fadeIn}
-        style={underlineStyle}
-        whileHover={underlineEffect}
-      >
-        {children}
-      </motion.a>
-    </p>
+    <Link href={href} passHref>
+      <p className={className}>
+        <motion.a
+          className={`relative ${
+            router.asPath === href
+              ? 'font-bold dark:text-opacity-80 dark:hover:text-opacity-100'
+              : 'dark:text-opacity-60 dark:hover:text-opacity-100'
+          } text-black dark:text-white`}
+          variants={fadeIn}
+          style={underlineStyle}
+          whileHover={underlineEffect}
+        >
+          {children}
+        </motion.a>
+      </p>
+    </Link>
   )
 }
