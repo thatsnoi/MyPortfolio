@@ -51,7 +51,7 @@ const About = () => {
           />
         </motion.div>
       </Container>
-      <Container className="flex justify-between space-x-16 mt-12">
+      <Container className="flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-16 md:mt-12">
         <motion.div
           className="flex flex-col space-y-4"
           initial="hidden"
@@ -121,12 +121,12 @@ function Education() {
     >
       <InfoBox
         label="MS Data Science, Universitat de Barcelona"
-        value="2021-2022"
+        value="2021 – 2022"
       />
-      <InfoBox label="BS Information Systems, TUM" value="2018-2021" />
+      <InfoBox label="BS Information Systems, TUM" value="2018 – 2021" />
       <InfoBox
         label="Abitur, German International School Dubai"
-        value="2012-2018"
+        value="2012 – 2018"
       />
     </motion.div>
   )
@@ -140,9 +140,9 @@ function Experience() {
       animate="visible"
       variants={list()}
     >
-      <InfoBox label="Software Developer, Qualicen" value="2021-Current" />
-      <InfoBox label="Intern, Thaltegos" value="2020-2021" />
-      <InfoBox label="Freelancer" value="2019-2020" />
+      <InfoBox label="Software Developer, Qualicen" value="2021 – Current" />
+      <InfoBox label="Intern, Thaltegos" value="2020 – 2021" />
+      <InfoBox label="Freelancer" value="2019 – 2020" />
     </motion.div>
   )
 }

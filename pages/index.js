@@ -53,7 +53,7 @@ const Hero = () => {
 
 const Projects = () => {
   return (
-    <div id="projects" className="pt-20">
+    <div id="projects" className="pt-10">
       <Container className="h-96">
         <Title>Projects</Title>
       </Container>
