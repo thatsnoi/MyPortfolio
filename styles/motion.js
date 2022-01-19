@@ -19,13 +19,13 @@ export const list = (delay = 0, staggerChildren = 0.1) => {
 
 export const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-  hidden: { opacity: 0, y: -100 },
+  hidden: { opacity: 0, y: -20 },
 }
 
 export const fadeInWithDelay = (delay = 0) => {
   return {
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: delay } },
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: -20 },
   }
 }
 
