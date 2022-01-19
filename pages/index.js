@@ -3,14 +3,13 @@ import Container from '../components/Container'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import { motion } from 'framer-motion'
-import { list, fadeIn, fadeInWithDelay } from './../styles/motion'
-import Image from 'next/image'
-import meSrc from './../public/me.png'
+import { list, fadeIn } from './../styles/motion'
 import Title from '../components/Title'
+import About from '../components/About'
 
 export default function Home() {
   return (
-    <div className="relative z-50 overflow-x-hidden pr-32" id="home">
+    <div className="relative z-50 overflow-x-hidden pr-16 md:pr-32" id="home">
       <Background />
       <Header />
       <Sidebar />
@@ -46,45 +45,6 @@ const Hero = () => {
           <motion.p className="text-3xl md:text-4xl" variants={fadeIn}>
             I am a software developer and data scientist.
           </motion.p>
-        </motion.div>
-      </Container>
-    </div>
-  )
-}
-
-const About = () => {
-  return (
-    <div id="about" className="pt-20">
-      <Container>
-        <Title>About</Title>
-      </Container>
-      <Container className="flex flex-col md:flex-row space-x-10 items-start justify-start">
-        <motion.div
-          className="standard-text"
-          variants={fadeInWithDelay(0.25)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          Hello! I'm Noah, a software developer from Germany who is currently
-          studying Data Science in Barcelona. I love to create beautiful
-          applications for the web. Here are a few of my favorite technologies I
-          like to work with:
-        </motion.div>
-        <motion.div
-          className="hidden md:block relative bg-white rounded-2xl w-64 h-64 flex-shrink-0 z-0 shadow-2xl"
-          whileHover={{ scale: 1.2, rotateX: 10, rotateY: 10 }}
-          variants={fadeInWithDelay(0.5)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <Image
-            className="absolute bottom-0 left-0 right-0 top-0 rounded-2xl"
-            style={{ zIndex: -1 }}
-            src={meSrc}
-            alt="That's me!"
-          />
         </motion.div>
       </Container>
     </div>
