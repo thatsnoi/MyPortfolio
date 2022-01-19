@@ -65,14 +65,14 @@ const About = () => {
           About
         </motion.p>
       </Container>
-      <Container className="flex space-x-10 justify-between">
+      <Container className="flex flex-col md:flex-row space-x-10 items-start justify-start">
         <div className="standard-text">
           Hello! I'm Noah, a software developer from Germany who is currently
           studying Data Science in Barcelona. Here are a few of my favorite
           technologies I like to work with:
         </div>
         <motion.div
-          className="relative bg-white rounded-2xl w-64 h-64 flex-shrink-0 z-0 shadow-2xl"
+          className="hidden md:block relative bg-white rounded-2xl w-64 h-64 flex-shrink-0 z-0 shadow-2xl"
           whileHover={{ scale: 1.2, rotateX: 10, rotateY: 10 }}
         >
           <Image
