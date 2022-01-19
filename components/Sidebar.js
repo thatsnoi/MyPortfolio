@@ -11,9 +11,23 @@ export default function Sidebar() {
       initial="hidden"
       animate="visible"
     >
-      <Icon Icon={FiGithub} />
-      <Icon Icon={FiLinkedin} />
-      <Icon Icon={FiMail} />
+      <a
+        href="https://www.github.com/thatsnoi"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon Icon={FiGithub} />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/noah-jadallah"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon Icon={FiLinkedin} />
+      </a>
+      <a href="mailto:noahjadallah@outlook.de">
+        <Icon Icon={FiMail} />
+      </a>
     </motion.div>
   )
 }
