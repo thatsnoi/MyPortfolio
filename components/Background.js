@@ -19,22 +19,22 @@ export default function Background() {
         style={{ zIndex: -20 }}
       ></div>
       <Bubble
-        width="1114px"
-        height="711px"
-        left="-154px"
-        top="-167px"
+        width="100em"
+        height="40em"
+        left="-15em"
+        top="-17em"
         color="#FF367E"
       />
       <Bubble
-        width="800px"
-        height="600px"
+        width="80em"
+        height="50em"
         right="-154px"
         top="150px"
         color="#4A5CFF"
       />
       <Bubble
-        width="900px"
-        height="500px"
+        width="80em"
+        height="50em"
         left="-50px"
         top="70vh"
         color="#FF367E"

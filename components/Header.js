@@ -40,6 +40,26 @@ export default function Header() {
         <MenuItem href="/#projects"> Projects</MenuItem>
         <MenuItem href="/#contact">Contact</MenuItem>
       </motion.div>
+      <motion.div
+        className="group md:hidden flex flex-col items-end cursor-pointer space-y-2"
+        initial="hidden"
+        animate="visible"
+        variants={list()}
+        whileHover={{ scale: 1.05 }}
+      >
+        <motion.div
+          className="w-10 h-1 bg-black dark:bg-white bg-opacity-70 dark:bg-opacity-80 group-hover:bg-opacity-100 group-hover:dark:bg-opacity-100"
+          variants={fadeIn}
+        ></motion.div>
+        <motion.div
+          className="w-6 h-1 bg-black dark:bg-white bg-opacity-70 dark:bg-opacity-80 group-hover:bg-opacity-100 group-hover:dark:bg-opacity-100"
+          variants={fadeIn}
+        ></motion.div>
+        <motion.div
+          className="w-8 h-1 bg-black dark:bg-white bg-opacity-70 dark:bg-opacity-80 group-hover:bg-opacity-100 group-hover:dark:bg-opacity-100"
+          variants={fadeIn}
+        ></motion.div>
+      </motion.div>
     </Container>
   )
 }

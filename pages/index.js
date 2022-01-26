@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import { list, fadeIn } from './../styles/motion'
 import Title from '../components/Title'
 import About from '../components/About'
+import Projects from '../components/Projects'
 
 export default function Home() {
   return (
@@ -46,16 +47,6 @@ const Hero = () => {
             I am a software developer and data scientist.
           </motion.p>
         </motion.div>
-      </Container>
-    </div>
-  )
-}
-
-const Projects = () => {
-  return (
-    <div id="projects" className="pt-10">
-      <Container className="h-96">
-        <Title>Projects</Title>
       </Container>
     </div>
   )

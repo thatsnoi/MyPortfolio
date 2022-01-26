@@ -35,7 +35,7 @@ const About = () => {
           <br />
           Here are a few of my skills, my education and experience:
         </motion.div>
-        <motion.div
+        {/* <motion.div
           className="hidden md:block relative bg-white rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl"
           whileHover={{ scale: 1.2, rotateX: 10, rotateY: 10 }}
           variants={fadeInWithDelay(0.5)}
@@ -49,7 +49,7 @@ const About = () => {
             src={meSrc}
             alt="That's me!"
           />
-        </motion.div>
+        </motion.div> */}
       </Container>
       <Container className="flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-16 md:mt-12">
         <motion.div
@@ -104,9 +104,21 @@ function MySkills() {
       viewport={{ once: true }}
       variants={list()}
     >
-      <InfoBox label="Frontend Development" value="Node.js" />
-      <InfoBox label="App Development" value="Node.js" />
-      <InfoBox label="ML/DS" value="Python" />
+      <InfoBox
+        label="Frontend Development"
+        value="Node.js"
+        details="React, Next.js, Redux, TypeScript, TailwindCSS"
+      />
+      <InfoBox
+        label="App Development"
+        value="Node.js"
+        details="Electron with React"
+      />
+      <InfoBox
+        label="ML/DS"
+        value="Python"
+        details="Pandas, Numpy, Tensorflow, Keras"
+      />
     </motion.div>
   )
 }
@@ -122,11 +134,17 @@ function Education() {
       <InfoBox
         label="MS Data Science, Universitat de Barcelona"
         value="2021/22"
+        details="Current average grade: 8.5/10"
       />
-      <InfoBox label="BS Information Systems, TUM" value="2018–21" />
+      <InfoBox
+        label="BS Information Systems, TUM"
+        value="2018–21"
+        details="Final Thesis: 1.0"
+      />
       <InfoBox
         label="Abitur, German International School Dubai"
         value="2012–18"
+        details="Final grade: 1.6"
       />
     </motion.div>
   )
@@ -141,6 +159,7 @@ function Experience() {
       variants={list()}
     >
       <InfoBox label="Software Developer, Qualicen" value="2021–Current" />
+      <InfoBox label="Co-Founder, Flash AIO" value="2020–Current" />
       <InfoBox label="Intern, Thaltegos" value="2020–21" />
       <InfoBox label="Freelancer" value="2019–20" />
     </motion.div>
