@@ -31,7 +31,7 @@ const Hero = () => {
           animate="visible"
         >
           <motion.p
-            className="text-3xl pb-3 text-gray-900 dark:text-white dark:text-opacity-50"
+            className="pb-3 text-3xl standard-text-light"
             variants={fadeIn}
           >
             Hi, my name is

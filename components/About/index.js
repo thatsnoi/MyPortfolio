@@ -23,7 +23,7 @@ const About = () => {
       </Container>
       <Container className="flex flex-col md:flex-row md:space-x-10 items-start justify-start">
         <motion.div
-          className="standard-text"
+          className="standard-text text-2xl"
           variants={fadeInWithDelay(0.25)}
           initial="hidden"
           whileInView="visible"
@@ -121,12 +121,12 @@ function Education() {
     >
       <InfoBox
         label="MS Data Science, Universitat de Barcelona"
-        value="2021 – 2022"
+        value="2021/22"
       />
-      <InfoBox label="BS Information Systems, TUM" value="2018 – 2021" />
+      <InfoBox label="BS Information Systems, TUM" value="2018–21" />
       <InfoBox
         label="Abitur, German International School Dubai"
-        value="2012 – 2018"
+        value="2012–18"
       />
     </motion.div>
   )
@@ -140,9 +140,9 @@ function Experience() {
       animate="visible"
       variants={list()}
     >
-      <InfoBox label="Software Developer, Qualicen" value="2021 – Current" />
-      <InfoBox label="Intern, Thaltegos" value="2020 – 2021" />
-      <InfoBox label="Freelancer" value="2019 – 2020" />
+      <InfoBox label="Software Developer, Qualicen" value="2021–Current" />
+      <InfoBox label="Intern, Thaltegos" value="2020–21" />
+      <InfoBox label="Freelancer" value="2019–20" />
     </motion.div>
   )
 }
@@ -151,9 +151,9 @@ function MenuItem({ children, onClick, active }) {
   return (
     <p className="cursor-pointer" onClick={onClick}>
       <motion.a
-        className={`relative standard-text ${
-          active ? 'dark:text-opacity-100' : 'dark:text-opacity-60'
-        } dark:hover:text-opacity-100`}
+        className={`relative text-2xl ${
+          active ? 'standard-text-strong' : 'standard-text-light-hover'
+        }`}
         variants={fadeIn}
         style={underlineStyle}
         whileHover={underlineEffect}

@@ -10,7 +10,7 @@ export default function Icon({ Icon, ...props }) {
       variants={fadeIn}
     >
       <Icon
-        className="cursor-pointer text-3xl text-black dark:text-white dark:text-opacity-80 dark:hover:text-opacity-100"
+        className="cursor-pointer standard-text-light-hover text-3xl"
         {...props}
       />
     </motion.div>

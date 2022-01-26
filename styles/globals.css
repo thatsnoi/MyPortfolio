@@ -50,6 +50,18 @@ body {
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.standard-text-strong {
+  @apply text-black dark:text-white text-opacity-100 dark:text-opacity-100;
+}
+
 .standard-text {
-  @apply text-2xl dark:text-white dark:text-opacity-80;
+  @apply text-black dark:text-white text-opacity-80 dark:text-opacity-80;
+}
+
+.standard-text-light {
+  @apply text-black dark:text-white text-opacity-70 dark:text-opacity-60;
+}
+
+.standard-text-light-hover {
+  @apply text-black dark:text-white text-opacity-70 dark:text-opacity-60 hover:text-opacity-100 dark:hover:text-opacity-100;
 }

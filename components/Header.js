@@ -53,9 +53,9 @@ function MenuItem({ className, children, href }) {
         <motion.a
           className={`relative ${
             router.asPath === href
-              ? 'font-bold dark:text-opacity-80 dark:hover:text-opacity-100'
-              : 'dark:text-opacity-60 dark:hover:text-opacity-100'
-          } text-black dark:text-white`}
+              ? 'font-bold standard-text-strong'
+              : 'standard-text-light-hover'
+          }`}
           variants={fadeIn}
           style={underlineStyle}
           whileHover={underlineEffect}
