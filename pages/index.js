@@ -3,7 +3,7 @@ import Container from '../components/Container'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import { motion } from 'framer-motion'
-import { list, fadeIn } from './../styles/motion'
+import { list, fadeIn, fadeInWithDelay } from './../styles/motion'
 import Title from '../components/Title'
 import About from '../components/About'
 import Projects from '../components/Projects'
@@ -18,6 +18,11 @@ export default function Home() {
       <About />
       <Projects />
       <Contact />
+      <Container className="flex justify-between">
+        <p className="standard-text-light">Copyright 2020</p>
+        <p className="standard-text-light">Made by me with ❤️</p>
+        <p className="standard-text-light">Privacy Policy</p>
+      </Container>
     </div>
   )
 }
@@ -54,9 +59,45 @@ const Hero = () => {
 
 const Contact = () => {
   return (
-    <div id="contact" className="pt-20">
-      <Container className="h-96">
+    <div id="contact" className="pt-20 pb-24">
+      <Container>
         <Title>Contact</Title>
+        <motion.p
+          className="standard-text text-2xl mt-5"
+          variants={fadeInWithDelay(0.25)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Whether you have new opportunities for me or you just want to talk, I
+          am always all ears.
+        </motion.p>
+
+        <motion.p
+          className="standard-text text-2xl mt-5"
+          variants={fadeInWithDelay(0.25)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Email:{' '}
+          <a
+            className="underline cursor-pointer"
+            href="mailto:noahjadallah@outlook.de"
+          >
+            noahjadallah@outlook.de
+          </a>
+        </motion.p>
+        <motion.p
+          className="standard-text text-2xl mt-5"
+          variants={fadeInWithDelay(0.25)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Want to have a look at my CV?{' '}
+          <span className="underline cursor-pointer">Download it here.</span>
+        </motion.p>
       </Container>
     </div>
   )

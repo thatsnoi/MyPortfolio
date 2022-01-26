@@ -1,18 +1,23 @@
 import Container from '../Container'
 import Title from '../Title'
-import Icon from '../Icon'
-import { FiGithub } from 'react-icons/fi'
-import Button from '../Button'
 import Project from './Project'
+import { motion } from 'framer-motion'
+import { fadeIn, fadeInWithDelay } from './../../styles/motion'
 
 const Projects = () => {
   return (
     <div id="projects" className="pt-20">
       <Container>
         <Title>Projects</Title>
-        <p className="standard-text text-2xl mt-5">
+        <motion.p
+          className="standard-text text-2xl mt-5"
+          variants={fadeInWithDelay(0.25)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           Here are a few projects I did:
-        </p>
+        </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
           <Project name="Flash AIO" type="SaaS Product" />
           <Project
