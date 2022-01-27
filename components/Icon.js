@@ -9,10 +9,7 @@ export default function Icon({ Icon, ...props }) {
       whileTap={{ scale: 1.2 }}
       variants={fadeIn}
     >
-      <Icon
-        className="cursor-pointer standard-text-light-hover text-3xl"
-        {...props}
-      />
+      <Icon className=" standard-text-light-hover text-3xl" {...props} />
     </motion.div>
   )
 }

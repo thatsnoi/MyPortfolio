@@ -5,7 +5,7 @@ import { fadeIn } from '../styles/motion'
 const InfoBox = ({ label, value, details }) => {
   return (
     <motion.div
-      className="group flex flex-col bg-white bg-opacity-20 dark:bg-opacity-10 rounded-2xl w-full cursor-pointer dark:hover:text-opacity-100 shadow-sm border border-black dark:border-0"
+      className="group flex flex-col bg-white bg-opacity-20 dark:bg-opacity-10 rounded-2xl w-full  dark:hover:text-opacity-100 shadow-sm border border-black dark:border-0"
       variants={fadeIn}
       style={{
         backdropFilter: 'blur(200px)',

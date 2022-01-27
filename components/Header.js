@@ -20,7 +20,7 @@ export default function Header() {
       }}
     >
       <motion.h1
-        className="dark:text-white dark:text-opacity-80 cursor-pointer"
+        className="dark:text-white dark:text-opacity-80 "
         initial="hidden"
         animate="visible"
         variants={fadeIn}
@@ -28,7 +28,7 @@ export default function Header() {
         Noah Jadallah
       </motion.h1>
       <motion.div
-        className="hidden md:flex flex-col text-right cursor-pointer"
+        className="hidden md:flex flex-col text-right "
         initial="hidden"
         animate="visible"
         variants={list(1.5)}
@@ -41,7 +41,7 @@ export default function Header() {
         <MenuItem href="/#contact">Contact</MenuItem>
       </motion.div>
       <motion.div
-        className="group md:hidden flex flex-col items-end cursor-pointer space-y-2"
+        className="group md:hidden flex flex-col items-end  space-y-2"
         initial="hidden"
         animate="visible"
         variants={list()}

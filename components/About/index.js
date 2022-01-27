@@ -168,7 +168,7 @@ function Experience() {
 
 function MenuItem({ children, onClick, active }) {
   return (
-    <p className="cursor-pointer" onClick={onClick}>
+    <p className="" onClick={onClick}>
       <motion.a
         className={`relative text-2xl ${
           active ? 'standard-text-strong' : 'standard-text-light-hover'
