@@ -12,7 +12,7 @@ import { useState } from 'react'
 import { MenuButton } from './MenuButton'
 
 export default function Header() {
-  const [expandedMenu, setExpandedMenu] = useState(true)
+  const [expandedMenu, setExpandedMenu] = useState(false)
 
   return (
     <Container
@@ -54,6 +54,7 @@ export default function Header() {
       <motion.div
         className="fixed top-0 right-0 left-0 bg-white dark:bg-black bg-opacity-90 z-40"
         animate={{ height: expandedMenu ? '100vh' : '0vh' }}
+        initial={false}
         transition={{ duration: 0.3 }}
         style={{
           backdropFilter: 'blur(100px)',
@@ -63,6 +64,7 @@ export default function Header() {
           className="flex flex-col p-4 items-center justify-center space-y-5 pt-20"
           animate={expandedMenu ? 'visible' : 'hidden'}
           variants={list(0)}
+          initial="hidden"
         >
           <MenuItem href="/#home" large>
             Home
