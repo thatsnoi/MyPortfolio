@@ -20,7 +20,7 @@ export default function Header() {
       }}
     >
       <motion.h1
-        className="dark:text-white dark:text-opacity-80"
+        className="dark:text-white dark:text-opacity-80 cursor-pointer"
         initial="hidden"
         animate="visible"
         variants={fadeIn}

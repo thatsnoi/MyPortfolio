@@ -35,7 +35,7 @@ const About = () => {
           <br />
           Here are a few of my skills, my education and experience:
         </motion.div>
-        {/* <motion.div
+        <motion.div
           className="hidden md:block relative bg-white rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl"
           whileHover={{ scale: 1.2, rotateX: 10, rotateY: 10 }}
           variants={fadeInWithDelay(0.5)}
@@ -49,7 +49,7 @@ const About = () => {
             src={meSrc}
             alt="That's me!"
           />
-        </motion.div> */}
+        </motion.div>
       </Container>
       <Container className="flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-16 md:mt-12">
         <motion.div
