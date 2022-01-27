@@ -23,17 +23,16 @@ const About = () => {
       </Container>
       <Container className="flex flex-col md:flex-row md:space-x-10 items-start justify-start">
         <motion.div
-          className="standard-text text-2xl"
+          className="flex flex-col justify-between standard-text text-2xl"
           variants={fadeInWithDelay(0.25)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
           Hello! I'm Noah, a software developer from Germany who is currently
-          studying Data Science in Barcelona. I love to create beautiful
-          applications for the web. <br />
-          <br />
-          Here are a few of my skills, my education and experience:
+          studying Data Science in Barcelona until July this year. I love to
+          create beautiful applications for the web and enhance them with
+          data-driven approaches.
         </motion.div>
         <motion.div
           className="hidden md:block relative bg-white rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl"
@@ -51,7 +50,18 @@ const About = () => {
           />
         </motion.div>
       </Container>
-      <Container className="flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-16 md:mt-12">
+      <Container>
+        <motion.div
+          className="flex flex-col justify-between standard-text text-2xl"
+          variants={fadeInWithDelay(0.25)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          Here are a few of my skills, my education and experience:
+        </motion.div>
+      </Container>
+      <Container className="flex flex-col md:flex-row justify-between space-y-5 md:space-y-0 md:space-x-16 md:mt-5">
         <motion.div
           className="flex flex-col space-y-4"
           initial="hidden"

@@ -19,7 +19,7 @@ export default function Home() {
       <Projects />
       <Contact />
       <Container className="flex justify-between">
-        <p className="standard-text-light">Copyright 2020</p>
+        <p className="standard-text-light">Copyright 2022</p>
         <p className="standard-text-light">Made by me with ❤️</p>
         <p className="standard-text-light">Privacy Policy</p>
       </Container>
