@@ -15,7 +15,7 @@ const InfoBox = ({ label, value, details }) => {
       onClick={() => setExpanded(!expanded)}
     >
       <div className="w-full relative flex flex-col lg:flex-row justify-between items-start lg:items-center p-4 pr-10 lg:pr-4">
-        <p className="standard-text-light text-2xl group-hover:text-opacity-100 dark:group-hover:text-opacity-100 transition-all duration-200">
+        <p className="standard-text-light text-2xl group-hover:text-opacity-100 dark:group-hover:text-opacity-100 transition-all duration-200 text-left">
           {label}
         </p>
 

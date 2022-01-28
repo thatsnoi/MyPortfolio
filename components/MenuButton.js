@@ -62,17 +62,10 @@ const MenuButton = ({
       {...props}
       className="md:hidden standard-text-light z-50"
     >
+      <motion.line x1="0" x2="4" y1="0" y2="0" variants={top} {...lineProps} />
       <motion.line
-        x1="0"
-        x2="0.3rem"
-        y1="0"
-        y2="0"
-        variants={top}
-        {...lineProps}
-      />
-      <motion.line
-        x1="0.1rem"
-        x2="0.3rem"
+        x1="1"
+        x2="4"
         y1="1.5"
         y2="1.5"
         variants={center}
@@ -80,7 +73,7 @@ const MenuButton = ({
       />
       <motion.line
         x1="0"
-        x2="0.3rem"
+        x2="4"
         y1="3"
         y2="3"
         variants={bottom}

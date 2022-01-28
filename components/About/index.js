@@ -35,7 +35,7 @@ const About = () => {
           data-driven approaches.
         </motion.div>
         <motion.div
-          className="relative bg-white rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl mt-5 md:mt-0"
+          className="relative rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl mt-5 md:mt-0"
           whileHover={{ scale: 1.2, rotateX: 10, rotateY: 10, rotateZ: 2 }}
           variants={fadeInWithDelay(0.5)}
           initial="hidden"
