@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { FiChevronDown } from 'react-icons/fi'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 import { fadeIn } from '../styles/motion'
 
 const InfoBox = ({ label, value, details }) => {
