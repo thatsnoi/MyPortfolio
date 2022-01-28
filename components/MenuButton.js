@@ -19,7 +19,7 @@ const MenuButton = ({
     },
     opened: {
       rotate: 45,
-      translateY: 1.25,
+      translateY: 1.5,
     },
   }
   const center = {
@@ -38,7 +38,6 @@ const MenuButton = ({
     opened: {
       rotate: -45,
       translateY: -1.5,
-      translateX: 0.6,
     },
   }
   lineProps = {

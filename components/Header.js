@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Container from './Container'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   list,
   fadeIn,
@@ -60,37 +60,56 @@ export default function Header() {
           backdropFilter: 'blur(100px)',
         }}
       >
-        <motion.div
-          className="flex flex-col p-4 items-center justify-center space-y-5 pt-20"
-          animate={expandedMenu ? 'visible' : 'hidden'}
-          variants={list(0)}
-          initial="hidden"
-        >
-          <MenuItem href="/#home" large>
-            Home
-          </MenuItem>
-          <MenuItem href="/#about" large>
-            About
-          </MenuItem>
-          <MenuItem href="/#projects" large>
-            {' '}
-            Projects
-          </MenuItem>
-          <MenuItem href="/#contact" large>
-            Contact
-          </MenuItem>
-        </motion.div>
+        <AnimatePresence>
+          {expandedMenu && (
+            <motion.div
+              className="flex flex-col p-4 items-center justify-center space-y-5 pt-20"
+              animate={expandedMenu ? 'visible' : 'hidden'}
+              variants={list(0)}
+              initial="hidden"
+            >
+              <MenuItem
+                href="/#home"
+                large
+                onClick={() => setExpandedMenu(!expandedMenu)}
+              >
+                Home
+              </MenuItem>
+              <MenuItem
+                href="/#about"
+                large
+                onClick={() => setExpandedMenu(!expandedMenu)}
+              >
+                About
+              </MenuItem>
+              <MenuItem
+                href="/#projects"
+                large
+                onClick={() => setExpandedMenu(!expandedMenu)}
+              >
+                Projects
+              </MenuItem>
+              <MenuItem
+                href="/#contact"
+                large
+                onClick={() => setExpandedMenu(!expandedMenu)}
+              >
+                Contact
+              </MenuItem>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </Container>
   )
 }
 
-function MenuItem({ className, children, href, large }) {
+function MenuItem({ className, children, href, large, onClick }) {
   const router = useRouter()
 
   return (
     <Link href={href} passHref>
-      <p className={className}>
+      <p className={className} onClick={onClick}>
         <motion.a
           className={`relative ${large ? 'text-5xl' : ''} ${
             router.asPath === href
@@ -100,6 +119,7 @@ function MenuItem({ className, children, href, large }) {
           variants={fadeIn}
           style={underlineStyle}
           whileHover={underlineEffect}
+          whileTap={underlineEffect}
         >
           {children}
         </motion.a>

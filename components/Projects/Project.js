@@ -16,7 +16,7 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
       whileInView="visible"
       viewport={{ once: true }}
     >
-      <div className="flex justify-between">
+      <div className="flex flex-col md:flex-row lg:flex-col xl:flex-row justify-between">
         <div className="flex flex-col">
           <h3 className="standard-text group-hover:dark:text-opacity-100 group-hover:text-opacity-100 transition-all text-3xl md:text-4xl font-bold truncate">
             {name}
@@ -52,6 +52,7 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
           return <p key={i}>{'- ' + text}</p>
         })}
       </div>
+
       <div className="flex flex-row-reverse justify-between items-center">
         {learnMore && <Button>Learn More</Button>}
       </div>
