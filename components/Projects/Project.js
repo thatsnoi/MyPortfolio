@@ -26,7 +26,7 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
         <div className="flex space-x-3 pt-2">
           {link && (
             <a
-              className="standard-text-light z-50"
+              className="standard-text-light z-10"
               href={link}
               target="_blank"
               rel="noreferrer"
@@ -36,7 +36,7 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
           )}
           {github && (
             <a
-              className="standard-text-light z-50"
+              className="standard-text-light z-10"
               href={github}
               target="_blank"
               rel="noreferrer"
