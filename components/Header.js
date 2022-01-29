@@ -52,7 +52,7 @@ export default function Header() {
         color="white"
       />
       <motion.div
-        className="fixed top-0 right-0 left-0 bg-white dark:bg-black bg-opacity-90 z-40"
+        className="fixed top-0 right-0 left-0 bg-white dark:bg-black z-40"
         animate={{ height: expandedMenu ? '100vh' : '0vh' }}
         initial={false}
         transition={{ duration: 0.3 }}
@@ -63,7 +63,7 @@ export default function Header() {
         <AnimatePresence>
           {expandedMenu && (
             <motion.div
-              className="flex flex-col p-4 items-center justify-center space-y-5 pt-20"
+              className="flex flex-col p-4 items-center justify-center space-y-5 pb-10 h-full"
               animate={expandedMenu ? 'visible' : 'hidden'}
               variants={list(0)}
               initial="hidden"

@@ -3,7 +3,7 @@ import { FiChevronDown } from 'react-icons/fi'
 import { useState } from 'react'
 import { fadeIn } from '../styles/motion'
 
-const InfoBox = ({ label, value, details }) => {
+const InfoBox = ({ label, value, children }) => {
   const [expanded, setExpanded] = useState(false)
   return (
     <motion.button
@@ -58,7 +58,7 @@ const InfoBox = ({ label, value, details }) => {
         animate={expanded ? 'open' : 'closed'}
         transition={{ type: 'spring', duration: 0.3 }}
       >
-        <div className="p-4">{details}</div>
+        <div className="p-4 text-left">{children}</div>
       </motion.div>
     </motion.button>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { fadeIn, fadeInWithDelay, list } from '../styles/motion'
 
 const MenuButton = ({
   isOpen = false,
@@ -40,6 +41,7 @@ const MenuButton = ({
       translateY: -1.5,
     },
   }
+
   lineProps = {
     stroke: 'currentColor',
     strokeWidth: strokeWidth,
@@ -61,6 +63,9 @@ const MenuButton = ({
       height={height}
       {...props}
       className="md:hidden standard-text-light z-50"
+      initial="hidden"
+      animate="visible"
+      variants={fadeInWithDelay(1.5)}
     >
       <motion.line x1="0" x2="4" y1="0" y2="0" variants={top} {...lineProps} />
       <motion.line

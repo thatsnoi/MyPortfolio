@@ -12,6 +12,7 @@ import meSrc from './../../public/me.png'
 import Title from '../Title'
 import InfoBox from '../InfoBox'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const About = () => {
   const [active, setActive] = useState('skills')
@@ -114,21 +115,18 @@ function MySkills() {
       viewport={{ once: true }}
       variants={list()}
     >
-      <InfoBox
-        label="Frontend Development"
-        value="Node.js"
-        details="React, Next.js, Redux, TypeScript, TailwindCSS"
-      />
-      <InfoBox
-        label="App Development"
-        value="Node.js"
-        details="Electron with React"
-      />
-      <InfoBox
-        label="ML/DS"
-        value="Python"
-        details="Pandas, Numpy, Tensorflow, Keras"
-      />
+      <InfoBox label="Frontend Development" value="Node.js">
+        React, Next.js, Redux, TypeScript, TailwindCSS
+      </InfoBox>
+      <InfoBox label="App Development" value="Node.js">
+        Electron with React
+      </InfoBox>
+      <InfoBox label="ML/DS" value="Python">
+        Pandas, Numpy, Tensorflow, Keras
+      </InfoBox>
+      <InfoBox label="Other" value="Various">
+        Java, R, SQL
+      </InfoBox>
     </motion.div>
   )
 }
@@ -144,18 +142,18 @@ function Education() {
       <InfoBox
         label="MS Data Science, Universitat de Barcelona"
         value="2021/22"
-        details="Current average grade: 8.5/10"
-      />
-      <InfoBox
-        label="BS Information Systems, TUM"
-        value="2018–21"
-        details="Final Thesis: 1.0"
-      />
+      >
+        Current average grade: 8.5/10
+      </InfoBox>
+      <InfoBox label="BS Information Systems, TUM" value="2018–21">
+        Final Thesis: 1.0
+      </InfoBox>
       <InfoBox
         label="Abitur, German International School Dubai"
         value="2012–18"
-        details="Final grade: 1.6"
-      />
+      >
+        Final grade: 1.6
+      </InfoBox>
     </motion.div>
   )
 }
@@ -168,10 +166,39 @@ function Experience() {
       animate="visible"
       variants={list()}
     >
-      <InfoBox label="Software Developer, Qualicen" value="2021–Current" />
-      <InfoBox label="Co-Founder, Flash AIO" value="2020–Current" />
-      <InfoBox label="Intern, Thaltegos" value="2020–21" />
-      <InfoBox label="Freelancer" value="2019–20" />
+      <InfoBox label="Software Developer, Qualicen" value="2021–Current">
+        - Development of Analytics Tool (Java, Node.js)
+      </InfoBox>
+      <InfoBox label="Co-Founder, Flash AIO" value="2020–Current">
+        <p>- Design, development of a Software as a Service (SaaS).</p>
+        <p>- Aquired over 70 monthly paying customers.</p>
+        <p>
+          - More information in the{' '}
+          <Link href="/#projects" passHref>
+            <span className="underline standard-text-light-hover">
+              projects section
+            </span>
+          </Link>
+          .
+        </p>
+      </InfoBox>
+      <InfoBox label="Intern, Thaltegos" value="2020–21">
+        <p>
+          - Improvement of over 50k Charge Point's Data Quality through ML
+          Techniques using KNIME and python.
+        </p>
+        <p>
+          - Architecture Design and Development of new SaaS in the E-Mobility
+          Sector (Node.js, React, GraphQL, SQL).
+        </p>
+      </InfoBox>
+      <InfoBox label="Freelancer" value="2019–20">
+        <p>
+          - Developed websites and (web) apps (Admin dashboards, POS systems
+          etc.) for multiple clients.
+        </p>
+        <p>- Handled client aquisition and communication.</p>
+      </InfoBox>
     </motion.div>
   )
 }
@@ -186,6 +213,7 @@ function MenuItem({ children, onClick, active }) {
         variants={fadeIn}
         style={underlineStyle}
         whileHover={underlineEffect}
+        whileTap={underlineEffect}
       >
         {children}
       </motion.a>

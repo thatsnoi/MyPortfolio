@@ -49,7 +49,12 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
 
       <div className="standard-text-light text-lg pt-2 ">
         {description?.map((text, i) => {
-          return <p key={i}>{'- ' + text}</p>
+          return (
+            <p key={i}>
+              <span>- </span>
+              {text}
+            </p>
+          )
         })}
       </div>
 
