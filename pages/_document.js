@@ -22,8 +22,11 @@ class MyDocument extends Document {
     `
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/logo.png" />
+        </Head>
         <body>
+          <title>Noah Jadallah</title>
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <Main />
           <NextScript />
