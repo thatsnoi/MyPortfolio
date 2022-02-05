@@ -63,7 +63,7 @@ export default function Header() {
         <AnimatePresence>
           {expandedMenu && (
             <motion.div
-              className="flex flex-col p-4 items-center justify-center space-y-5 pb-20 h-full"
+              className="flex flex-col p-4 items-center justify-center space-y-5 -mt-20 h-full"
               animate={expandedMenu ? 'visible' : 'hidden'}
               variants={list(0)}
               initial="hidden"
