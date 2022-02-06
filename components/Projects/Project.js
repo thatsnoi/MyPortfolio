@@ -31,7 +31,10 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <Icon Icon={FiExternalLink} />
+              <Icon
+                Icon={FiExternalLink}
+                className="standard-text-light-hover text-2xl md:text-3xl"
+              />
             </a>
           )}
           {github && (
@@ -41,7 +44,10 @@ const Project = ({ name, type, github, description, learnMore, link }) => {
               target="_blank"
               rel="noreferrer"
             >
-              <Icon Icon={FiGithub} />
+              <Icon
+                Icon={FiGithub}
+                className="standard-text-light-hover text-2xl md:text-3xl"
+              />
             </a>
           )}
         </div>

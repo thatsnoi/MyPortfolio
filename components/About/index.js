@@ -30,10 +30,10 @@ const About = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          Hello! I'm Noah, a software developer from Germany who is currently
-          studying Data Science in Barcelona until July this year. I love to
-          create beautiful applications for the web and enhance them with
-          data-driven approaches.
+          Hello! I'm Noah, a software engineer from Germany and I am currently
+          my Master's degree in Data Science at the University of Barcelona from
+          which I will graduate in July. I love to create beautiful applications
+          for the web and to solve Data Science problems.
         </motion.div>
         <motion.div
           className="relative rounded-2xl w-52 h-52 flex-shrink-0 z-0 shadow-2xl mt-5 md:mt-0"
@@ -115,17 +115,17 @@ function MySkills() {
       viewport={{ once: true }}
       variants={list()}
     >
-      <InfoBox label="Frontend Development" value="Node.js">
-        React, Next.js, Redux, TypeScript, TailwindCSS
-      </InfoBox>
-      <InfoBox label="App Development" value="Node.js">
-        Electron with React
+      <InfoBox label="Web Development" value="Node.js">
+        Node.js, React/Next.js, Redux, Express.js, GraphQL, Tailwind CSS,
+        HTML5/JS/CSS
       </InfoBox>
       <InfoBox label="ML/DS" value="Python">
-        Pandas, Numpy, Tensorflow, Keras
+        Python, Numpy, Pandas, Keras/Tensorflow, PyTorch, SQL | NLP, Deep
+        Learning (CNNs, RNNs, LSTMs), Data Visualization, Web scraping
       </InfoBox>
       <InfoBox label="Other" value="Various">
-        Java, R, SQL
+        Java, R, SQL | Continous Integration (Git), Analytical Thinking,
+        Architecture Design, Web Design, Web Scraping
       </InfoBox>
     </motion.div>
   )
@@ -143,10 +143,12 @@ function Education() {
         label="MS Data Science, Universitat de Barcelona"
         value="2021/22"
       >
-        Current average grade: 8.5/10
+        Present average grade: 8.5/10
       </InfoBox>
       <InfoBox label="BS Information Systems, TUM" value="2018–21">
-        Final Thesis: 1.0
+        Final Grade: 2.3 | Thesis Grade: 1.0 | Topic: Extraction of Causes and
+        Effects from NL Requirements by Fine-Tuning Tree Recursive Neural
+        Networks
       </InfoBox>
       <InfoBox
         label="Abitur, German International School Dubai"
@@ -166,12 +168,21 @@ function Experience() {
       animate="visible"
       variants={list()}
     >
-      <InfoBox label="Software Developer, Qualicen" value="2021–Current">
-        - Development of Analytics Tool (Java, Node.js)
+      <InfoBox label="Software Developer, Qualicen" value="2021–Present">
+        - Working on an analytics web app (Java, Node.js) in an agile
+        environment.
       </InfoBox>
-      <InfoBox label="Co-Founder, Flash AIO" value="2020–Current">
-        <p>- Design, development of a Software as a Service (SaaS).</p>
-        <p>- Aquired over 70 monthly paying customers.</p>
+      <InfoBox label="Co-Founder, Flash AIO" value="2020–Present">
+        <p>
+          - Co-Founded and developed a Software as a Service (SaaS) company that
+          helps users secure highly sought-after collector's items.
+        </p>
+        <p>
+          - Developed cross-platform Electron app and worked on integrations for
+          Discord and Stripe.
+        </p>
+        <p>- Implemented a custom license key and user management solution.</p>
+        <p>- Acquired over 70 monthly paying customers.</p>
         <p>
           - More information in the{' '}
           <Link href="/#projects" passHref>
@@ -184,18 +195,18 @@ function Experience() {
       </InfoBox>
       <InfoBox label="Intern, Thaltegos" value="2020–21">
         <p>
-          - Improvement of over 50k Charge Point's Data Quality through ML
-          Techniques using KNIME and python.
+          - Improved the quality of data of over 50k EV charging points by
+          utilizing various ML techniques through KNIME.
         </p>
         <p>
-          - Architecture Design and Development of new SaaS in the E-Mobility
-          Sector (Node.js, React, GraphQL, SQL).
+          - Designed software architecture and developed a new SaaS in the
+          E-Mobility Sector (Node.js, React, GraphQL, SQL).
         </p>
       </InfoBox>
       <InfoBox label="Freelancer" value="2019–20">
         <p>
-          - Developed websites and (web) apps (Admin dashboards, POS systems
-          etc.) for multiple clients.
+          - Developed websites and web apps (Admin dashboards, POS systems etc.)
+          for multiple clients.
         </p>
         <p>- Handled client aquisition and communication.</p>
       </InfoBox>

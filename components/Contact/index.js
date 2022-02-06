@@ -27,7 +27,7 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           Email:{' '}
-          <a className="underline " href="mailto:noahjadallah@outlook.de">
+          <a className="underline" href="mailto:noahjadallah@outlook.de">
             noahjadallah@outlook.de
           </a>
         </motion.p>
@@ -39,7 +39,14 @@ const Contact = () => {
           viewport={{ once: true }}
         >
           Want to have a look at my CV?{' '}
-          <span className="underline ">Download it here.</span>
+          <a
+            className="underline"
+            href="/Noah Jadallah.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download it here.
+          </a>
         </motion.p>
       </Container>
     </div>

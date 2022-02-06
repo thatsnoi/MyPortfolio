@@ -2,7 +2,7 @@ import Container from '../Container'
 import Title from '../Title'
 import Project from './Project'
 import { motion } from 'framer-motion'
-import { fadeIn, fadeInWithDelay } from './../../styles/motion'
+import { fadeInWithDelay } from './../../styles/motion'
 
 const Projects = () => {
   return (
@@ -59,7 +59,7 @@ const Projects = () => {
             description={[
               'Took role of SCRUM master in a university project with a team of 6.',
               'Designed and implemented Frontend for Movie Recommender Web App.',
-              'Tech Stack: React, Framer Motion, MobX, TailwindCSS.',
+              'Tech Stack: React, Framer Motion, MobX, Tailwind CSS.',
             ]}
             link="http://getmeamovie.com/"
           />
@@ -70,7 +70,7 @@ const Projects = () => {
             description={[
               'Designed and implemented this Portfolio Website.',
               'Implemented features like dark/light mode.',
-              'Tech Stack: Next.js, Framer Motion, TailwindCSS.',
+              'Tech Stack: Next.js, Framer Motion, Tailwind CSS.',
             ]}
             link="https://noahjadallah.vercel.app/"
           />
