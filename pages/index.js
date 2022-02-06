@@ -48,7 +48,7 @@ const Hero = () => {
             Noah Jadallah.
           </motion.p>
           <motion.p className="text-3xl md:text-4xl" variants={fadeIn}>
-            I am a software developer and data scientist.
+            I am a software engineer and data scientist.
           </motion.p>
         </motion.div>
       </Container>
