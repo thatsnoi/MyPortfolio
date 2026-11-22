@@ -1,7 +1,9 @@
 {
   "framework": null,
+  "buildCommand": "",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "redirects": [
-    { "source": "/Bachelor Thesis Final Noah Jadallah.pdf", "destination": "/thesis.pdf", "permanent": true }
+    { "source": "/Bachelor%20Thesis%20Final%20Noah%20Jadallah.pdf", "destination": "/thesis.pdf", "permanent": true }
   ]
 }
