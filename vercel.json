@@ -1,0 +1,7 @@
+{
+  "framework": null,
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/Bachelor Thesis Final Noah Jadallah.pdf", "destination": "/thesis.pdf", "permanent": true }
+  ]
+}
