@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noah Jadallah</title>
+  <meta name="description" content="Noah Jadallah — founder, building a new startup. Previously senior software engineer at Google.">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/courier-prime-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: "Courier Prime";
+      src: url("/fonts/courier-prime-400.woff2") format("woff2");
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Courier Prime";
+      src: url("/fonts/courier-prime-700.woff2") format("woff2");
+      font-weight: 700;
+      font-display: swap;
+    }
+
+    :root {
+      --paper: #fff;
+      --ink-1: #111;   /* name, titles */
+      --ink-2: #444;   /* body text */
+      --ink-3: #8a8a8a; /* dates, labels */
+      color-scheme: light;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink-2);
+      font: 400 17px/1.6 "Courier Prime", "Courier New", Courier, monospace;
+      padding: 12vh 20px 10vh;
+    }
+
+    main { max-width: 42rem; margin: 0 auto; }
+
+    h1 { color: var(--ink-1); font-size: 1.6rem; font-weight: 700; line-height: 1.2; }
+
+    .tagline { margin-top: 0.5rem; }
+
+    h2 {
+      color: var(--ink-3);
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 3.5rem 0 1.25rem;
+    }
+
+    ol { list-style: none; }
+    ol > li + li { margin-top: 1.5rem; }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 11ch 1fr;
+      column-gap: 3ch;
+    }
+    .when { color: var(--ink-3); white-space: nowrap; }
+    .what strong { color: var(--ink-1); font-weight: 700; }
+    .what p + p { margin-top: 0.15rem; }
+
+    a { color: var(--ink-1); text-decoration-color: var(--ink-3); text-underline-offset: 0.2em; }
+    a:hover { text-decoration-color: var(--ink-1); }
+
+    footer { margin-top: 3.5rem; }
+    footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem 1.75rem; }
+
+    @media (max-width: 560px) {
+      body { font-size: 16px; padding-top: 8vh; padding-inline: 16px; }
+      .entry { grid-template-columns: 1fr; }
+      .when { margin-bottom: 0.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Noah Jadallah</h1>
+      <p class="tagline">Building my own startup. Previously senior software engineer at Google. Hamburg.</p>
+    </header>
+
+    <section aria-labelledby="work">
+      <h2 id="work">Work</h2>
+      <ol>
+        <li class="entry">
+          <span class="when">2026 – now</span>
+          <div class="what">
+            <p><strong>Founder</strong>, my own startup</p>
+            <p>Starting something new. More soon.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2025 – 2026</span>
+          <div class="what">
+            <p><strong>Senior Software Engineer</strong>, Google</p>
+            <p>Tech lead for an internal multi-user AI agent system.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2022 – 2025</span>
+          <div class="what">
+            <p><strong>Software Engineer</strong>, Google</p>
+            <p>Led AI and ML for corporate data management. Built tools used daily by 180k+ Googlers.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2021 – 2022</span>
+          <div class="what">
+            <p><strong>Software Developer</strong>, Qualicen</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2018 – 2022</span>
+          <div class="what">
+            <p><strong>Co-Founder</strong>, Flash AIO</p>
+            <p>Sneaker bot sold as SaaS. Grew it to €5k MRR and 70+ paying customers.</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2020 – 2021</span>
+          <div class="what">
+            <p><strong>Software Development Intern</strong>, Thaltegos</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education</h2>
+      <ol>
+        <li class="entry">
+          <span class="when">2021 – 2022</span>
+          <div class="what">
+            <p><strong>MSc Data Science</strong>, Universitat de Barcelona</p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2018 – 2021</span>
+          <div class="what">
+            <p><strong>BSc Information Systems</strong>, Technical University of Munich</p>
+            <p>Thesis: <a href="/thesis.pdf">Extracting causes and effects from natural-language requirements</a></p>
+          </div>
+        </li>
+        <li class="entry">
+          <span class="when">2012 – 2018</span>
+          <div class="what">
+            <p><strong>Abitur</strong>, German International School Dubai</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="https://x.com/noahjadallah">X</a></li>
+        <li><a href="https://www.linkedin.com/in/noah-jadallah">LinkedIn</a></li>
+      </ul>
+    </footer>
+  </main>
+</body>
+</html>
